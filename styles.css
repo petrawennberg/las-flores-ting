@@ -1024,11 +1024,12 @@ tbody tr:last-child td {
 .pill-secondary {
   background: var(--bg-muted);
   border: none;
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .pill-secondary:hover {
   background: #EDE9E3;
+  color: #0053DB;
 }
 
 /* ── Voting Cards ── */
