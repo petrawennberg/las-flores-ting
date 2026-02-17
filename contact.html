@@ -7,34 +7,49 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button class="menu-toggle">&#9776;</button>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   <div class="sidebar-overlay"></div>
-  <nav class="sidebar">
+  <nav class="sidebar" aria-label="Main navigation">
     <div class="sidebar-header">
-      <div class="sidebar-org-name">Las Flores Water Co.</div>
-      <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+      <a href="index.html" class="sidebar-brand">
+        <img class="sidebar-seal" src="seal.svg" alt="Las Flores Water Co. seal" width="110" height="110">
+        <div>
+          <div class="sidebar-org-name">Las Flores Water Co.</div>
+          <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </a>
     </div>
     <ul class="sidebar-nav">
-      <li><a href="index.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
-      <li><a href="water-status.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
-      <li><a href="rates-billing.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
-      <li><a href="governance.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
-      <li><a href="documents.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
-      <li><a href="faq.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> FAQ</a></li>
-      <li><a href="contact.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
+      <li><a href="index.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+      <li><a href="water-status.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
+      <li><a href="rates-billing.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
+      <li><a href="governance.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
+      <li><a href="documents.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
+      <li><a href="faq.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg> FAQ</a></li>
+      <li><a href="contact.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
     </ul>
   </nav>
 
-  <main class="main-content">
-    <h1>Contact</h1>
-    <p class="page-description">Office location, hours, and emergency service information.</p>
+  <main class="main-content" id="main-content">
+
+    <div class="page-header">
+      <div>
+        <h1>Contact</h1>
+        <p class="page-description">Office location, hours, and emergency service information.</p>
+      </div>
+      <div class="header-actions">
+        <a href="tel:6267971138" class="urgent-link"><svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Report Issue: 626-797-1138</a>
+        <a href="https://lasflores.viewmybill.net/" target="_blank" rel="noopener" class="pill-button pill-primary">Pay Online</a>
+      </div>
+    </div>
 
     <div class="contact-grid">
       <div class="contact-block contact-emergency">
         <h2>Emergency</h2>
         <p class="contact-emergency-line">Emergency Water Service</p>
         <p class="contact-emergency-phone"><a href="tel:6267971138">626-797-1138</a></p>
-        <p class="contact-emergency-note">24 hours</p>
+        <p class="contact-emergency-note">Follow recorded instructions after hours</p>
       </div>
 
       <div class="contact-block">
@@ -49,6 +64,7 @@
         <h2>Location</h2>
         <p>428 East Sacramento Street</p>
         <p>Altadena, CA 91001</p>
+        <p class="text-sm text-tertiary" style="margin-top: 8px;">Mailing: PO Box 426, Altadena, CA 91003-0426</p>
       </div>
     </div>
 
@@ -67,7 +83,7 @@
           <tr>
             <td>Monday</td>
             <td>7:30 AM &ndash; 4:00 PM<br><span class="hours-note">Closed 12:00&ndash;12:30 for lunch</span></td>
-            <td>In-person payments accepted</td>
+            <td>In-person and phone. Only day for in-office payment drop-off.</td>
           </tr>
           <tr>
             <td>Tuesday</td>
@@ -103,7 +119,7 @@
       <h2>2026 Holiday Closures</h2>
       <ul class="holiday-list">
         <li>New Year's Day</li>
-        <li>MLK Day</li>
+        <li>Martin Luther King Jr. Day</li>
         <li>Presidents' Day</li>
         <li>Memorial Day</li>
         <li>Independence Day</li>
@@ -114,6 +130,38 @@
       </ul>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="seal.svg" alt="Las Flores Water Co. seal" width="48" height="48">
+        <div>
+          <div class="footer-org-name">Las Flores Water Co.</div>
+          <div class="footer-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <div class="footer-heading">Office</div>
+          <p>428 East Sacramento Street<br>Altadena, CA 91001</p>
+          <p>Mailing: PO Box 426<br>Altadena, CA 91003-0426</p>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <p>Phone: <a href="tel:6267971138">626-797-1138</a><br>Fax: 626-797-6138</p>
+          <p><a href="mailto:info@lasfloreswaterco.com">info@lasfloreswaterco.com</a></p>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <p>Mon: 7:30 AM &ndash; 4:00 PM<br>Wed &amp; Fri: 8:00 AM &ndash; 12:00 PM (remote)</p>
+          <p>Emergency service: <a href="tel:6267971138">626-797-1138</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Las Flores Water Co, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

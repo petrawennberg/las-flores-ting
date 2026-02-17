@@ -8,177 +8,260 @@
 </head>
 <body>
 
-  <button class="menu-toggle">&#9776;</button>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   <div class="sidebar-overlay"></div>
-  <nav class="sidebar">
+  <nav class="sidebar" aria-label="Main navigation">
     <div class="sidebar-header">
-      <div class="sidebar-org-name">Las Flores Water Co.</div>
-      <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+      <a href="index.html" class="sidebar-brand">
+        <img class="sidebar-seal" src="seal.svg" alt="Las Flores Water Co. seal" width="110" height="110">
+        <div>
+          <div class="sidebar-org-name">Las Flores Water Co.</div>
+          <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </a>
     </div>
     <ul class="sidebar-nav">
-      <li><a href="index.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
-      <li><a href="water-status.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
-      <li><a href="rates-billing.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
-      <li><a href="governance.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
-      <li><a href="documents.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
-      <li><a href="faq.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> FAQ</a></li>
-      <li><a href="contact.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
+      <li><a href="index.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+      <li><a href="water-status.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
+      <li><a href="rates-billing.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
+      <li><a href="governance.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
+      <li><a href="documents.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
+      <li><a href="faq.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg> FAQ</a></li>
+      <li><a href="contact.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
     </ul>
   </nav>
 
-  <div class="main">
-    <div class="content">
+  <main class="main-content" id="main-content">
 
-      <h1>Governance</h1>
-      <p class="page-description">Board of Directors, meeting schedule, and governing documents.</p>
-
-      <!-- Board of Directors -->
-      <section>
-        <h2>Board of Directors</h2>
-        <div class="board-grid">
-          <div class="board-member">
-            <div class="board-member-name">John V. Bednarski</div>
-            <div class="board-member-role">President</div>
-          </div>
-          <div class="board-member">
-            <div class="board-member-name">(Vacant)</div>
-            <div class="board-member-role">Vice President</div>
-          </div>
-          <div class="board-member">
-            <div class="board-member-name">Mary Ann Spieth</div>
-            <div class="board-member-role">Treasurer</div>
-          </div>
-          <div class="board-member">
-            <div class="board-member-name">Garry E. Bryant</div>
-            <div class="board-member-role">Secretary</div>
-          </div>
-          <div class="board-member">
-            <div class="board-member-name">David A. Mosher</div>
-            <div class="board-member-role">Director</div>
-          </div>
-          <div class="board-member">
-            <div class="board-member-name">Ha Nguyen</div>
-            <div class="board-member-role">Director</div>
-          </div>
-          <div class="board-member">
-            <div class="board-member-name">William Kimberling</div>
-            <div class="board-member-role">General Manager</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2026 Meeting Schedule -->
-      <section>
-        <h2>2026 Meeting Schedule</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Type</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>January 22</td>
-                <td>Special Annual Shareholder Meeting</td>
-                <td>6:00&ndash;8:00 PM</td>
-              </tr>
-              <tr>
-                <td>February 17</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>March 16</td>
-                <td>Annual Shareholder Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>April 21</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>May 19</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>June 16</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>July 21</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>August</td>
-                <td>No Meeting</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>September 15</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>October 20</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>November 17</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-              <tr>
-                <td>December 15</td>
-                <td>Board Meeting</td>
-                <td>7:00 PM</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-sm text-secondary">Board meetings are typically held the third Monday of each month. Shareholder meetings are open to the public.</p>
-      </section>
-
-      <!-- Governing Documents -->
-      <section>
-        <h2>Governing Documents</h2>
-        <div class="doc-group">
-          <a href="documents/lfwc-ByLaws-Restated.pdf" class="doc-item" target="_blank" rel="noopener">
-            <span class="doc-icon">&#128196;</span>
-            Restated Bylaws (PDF)
-          </a>
-          <a href="#" class="doc-item">
-            <span class="doc-icon">&#128196;</span>
-            Articles of Incorporation (PDF)
-          </a>
-          <a href="#" class="doc-item">
-            <span class="doc-icon">&#128196;</span>
-            2024 Annual Audit Report (PDF)
-          </a>
-        </div>
-      </section>
-
-      <!-- Shareholder Information -->
-      <section>
-        <h2>Shareholder Information</h2>
-        <ul class="mb-24" style="padding-left: 20px; font-size: 14px; line-height: 2;">
-          <li>Over 1,400 shareholders constitute the ownership structure</li>
-          <li>20% quorum required for shareholder meetings</li>
-          <li>Home sales require stock transfer ($75 fee) through escrow</li>
-          <li>Board consists of 5 elected directors</li>
-          <li>Annual shareholder meetings held third Monday of March</li>
-        </ul>
-      </section>
-
+    <div class="page-header">
+      <div>
+        <h1>Governance</h1>
+        <p class="page-description">Board of Directors, meeting schedule, and governing documents.</p>
+      </div>
+      <div class="header-actions">
+        <a href="tel:6267971138" class="urgent-link"><svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Report Issue: 626-797-1138</a>
+        <a href="https://lasflores.viewmybill.net/" target="_blank" rel="noopener" class="pill-button pill-primary">Pay Online</a>
+      </div>
     </div>
-  </div>
+
+    <!-- Board of Directors -->
+    <section>
+      <h2>Board of Directors</h2>
+      <div class="board-grid">
+        <div class="board-member">
+          <div class="board-member-name">John V. Bednarski</div>
+          <div class="board-member-role">President</div>
+        </div>
+        <div class="board-member">
+          <div class="board-member-name">(Vacant)</div>
+          <div class="board-member-role">Vice President</div>
+        </div>
+        <div class="board-member">
+          <div class="board-member-name">Mary Ann Spieth</div>
+          <div class="board-member-role">Treasurer</div>
+        </div>
+        <div class="board-member">
+          <div class="board-member-name">Garry E. Bryant</div>
+          <div class="board-member-role">Secretary</div>
+        </div>
+        <div class="board-member">
+          <div class="board-member-name">David A. Mosher</div>
+          <div class="board-member-role">Director</div>
+        </div>
+        <div class="board-member">
+          <div class="board-member-name">Ha Nguyen</div>
+          <div class="board-member-role">Director</div>
+        </div>
+        <div class="board-member">
+          <div class="board-member-name">William Kimberling</div>
+          <div class="board-member-role">General Manager</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shareholder Voting -->
+    <section>
+      <h2>Shareholder Voting</h2>
+      <p style="margin-bottom: 20px;">Active proposals and proxy voting for Las Flores Water Co. shareholders. Each share is entitled to one vote. You may vote online or submit a proxy form by mail.</p>
+
+      <div class="vote-card vote-active">
+        <div class="vote-card-header">
+          <span class="vote-status-badge"><svg style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg> Open for Voting</span>
+        </div>
+        <h3 class="vote-title">$3,000 Fire Recovery Fee Proposal</h3>
+        <p class="vote-description">Special assessment of $3,000 per share to fund infrastructure repair and system restoration following the Eaton Fire. Shareholders may pay as a lump sum or $50/month over 60 months.</p>
+        <div class="vote-meta">
+          <span>Introduced: January 22, 2026 Special Shareholder Meeting</span>
+          <span>Voting closes: March 16, 2026 &mdash; Annual Shareholder Meeting</span>
+        </div>
+        <div class="vote-actions">
+          <a href="https://electionbuddy.com" target="_blank" rel="noopener" class="pill-button pill-primary">
+            <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Vote Online
+          </a>
+          <a href="vote.html" class="pill-button pill-secondary">Full Proposal</a>
+        </div>
+      </div>
+
+      <div class="vote-card vote-closed">
+        <div class="vote-card-header">
+          <span class="vote-status-badge vote-badge-closed"><svg style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg> Closed</span>
+        </div>
+        <h3 class="vote-title">2026 Board of Directors Election</h3>
+        <p class="vote-description">Annual election of directors. Two seats were on the ballot for the 2026 term.</p>
+        <div class="vote-meta">
+          <span>Voted: January 22, 2026 Special Shareholder Meeting</span>
+        </div>
+      </div>
+
+      <p class="text-sm text-secondary" style="margin-top: 16px;">Voting is powered by <a href="https://electionbuddy.com" target="_blank" rel="noopener">ElectionBuddy</a>. Your shareholder account number is required to verify eligibility. Contact <a href="mailto:info@lasfloreswaterco.com">info@lasfloreswaterco.com</a> if you need your account number.</p>
+    </section>
+
+    <!-- 2026 Meeting Schedule -->
+    <section>
+      <h2>2026 Meeting Schedule</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>January 22</td>
+              <td>Special Annual Shareholder Meeting</td>
+              <td>6:00&ndash;8:00 PM (Altadena Public Library)</td>
+            </tr>
+            <tr>
+              <td>February 17</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>March 16</td>
+              <td>Board Meeting + Annual Shareholder Meeting</td>
+              <td>5:00 PM / 7:00 PM</td>
+            </tr>
+            <tr>
+              <td>April 20</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>May 18</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>June 15</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>July 20</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>August</td>
+              <td>No Meeting</td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td>September 21</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>October 19</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>November 16</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>December 21</td>
+              <td>Board Meeting</td>
+              <td>5:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-secondary">Board meetings are typically held the third Monday of each month at 428 E Sacramento St. Shareholder meetings are open to the public.</p>
+    </section>
+
+    <!-- Governing Documents -->
+    <section>
+      <h2>Governing Documents</h2>
+      <div class="doc-group">
+        <a href="#" class="doc-item" target="_blank" rel="noopener">
+          <span class="doc-icon">&#128196;</span>
+          Restated Bylaws (PDF)
+        </a>
+        <a href="#" class="doc-item">
+          <span class="doc-icon">&#128196;</span>
+          Articles of Incorporation (PDF)
+        </a>
+        <a href="#" class="doc-item">
+          <span class="doc-icon">&#128196;</span>
+          2024 Annual Audit Report (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- Shareholder Information -->
+    <section>
+      <h2>Shareholder Information</h2>
+      <ul class="mb-24" style="padding-left: 20px; font-size: 14px; line-height: 2;">
+        <li>Over 1,400 shareholders constitute the ownership structure</li>
+        <li>20% quorum required for shareholder meetings</li>
+        <li>Home sales require stock transfer ($75 fee) through escrow</li>
+        <li>Board consists of 5 elected directors</li>
+        <li>Annual shareholder meeting held third Monday of March</li>
+        <li>Each share entitled to one vote; proxy voting available</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="seal.svg" alt="Las Flores Water Co. seal" width="48" height="48">
+        <div>
+          <div class="footer-org-name">Las Flores Water Co.</div>
+          <div class="footer-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <div class="footer-heading">Office</div>
+          <p>428 East Sacramento Street<br>Altadena, CA 91001</p>
+          <p>Mailing: PO Box 426<br>Altadena, CA 91003-0426</p>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <p>Phone: <a href="tel:6267971138">626-797-1138</a><br>Fax: 626-797-6138</p>
+          <p><a href="mailto:info@lasfloreswaterco.com">info@lasfloreswaterco.com</a></p>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <p>Mon: 7:30 AM &ndash; 4:00 PM<br>Wed &amp; Fri: 8:00 AM &ndash; 12:00 PM (remote)</p>
+          <p>Emergency service: <a href="tel:6267971138">626-797-1138</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Las Flores Water Co, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

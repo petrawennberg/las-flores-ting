@@ -8,57 +8,64 @@
 </head>
 <body>
 
-  <button class="menu-toggle">&#9776;</button>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   <div class="sidebar-overlay"></div>
-  <nav class="sidebar">
+  <nav class="sidebar" aria-label="Main navigation">
     <div class="sidebar-header">
-      <div class="sidebar-org-name">Las Flores Water Co.</div>
-      <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+      <a href="index.html" class="sidebar-brand">
+        <img class="sidebar-seal" src="seal.svg" alt="Las Flores Water Co. seal" width="110" height="110">
+        <div>
+          <div class="sidebar-org-name">Las Flores Water Co.</div>
+          <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </a>
     </div>
     <ul class="sidebar-nav">
-      <li><a href="index.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
-      <li><a href="water-status.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
-      <li><a href="rates-billing.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
-      <li><a href="governance.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
-      <li><a href="documents.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
-      <li><a href="faq.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> FAQ</a></li>
-      <li><a href="contact.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
+      <li><a href="index.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+      <li><a href="water-status.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
+      <li><a href="rates-billing.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
+      <li><a href="governance.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
+      <li><a href="documents.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
+      <li><a href="faq.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg> FAQ</a></li>
+      <li><a href="contact.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
     </ul>
   </nav>
 
-  <main class="main-content">
+  <main class="main-content" id="main-content">
 
-    <div class="alert-banner alert-critical">
-      <strong>CRITICAL:</strong> Conservation status elevated due to Eaton Fire. Outdoor irrigation strictly limited to 2 days per week. Service restoration in progress for fire-affected properties.
+    <div class="page-header">
+      <div>
+        <h1>Las Flores Water Co.</h1>
+        <p class="page-description">Serving Altadena since 1885</p>
+      </div>
+      <div class="header-actions">
+        <a href="tel:6267971138" class="urgent-link"><svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Report Issue: 626-797-1138</a>
+        <a href="https://lasflores.viewmybill.net/" target="_blank" rel="noopener" class="pill-button pill-primary">Pay Online</a>
+      </div>
+    </div>
+
+    <div class="vote-card vote-active" style="margin-bottom: 16px;">
+      <div class="vote-card-header">
+        <span class="vote-status-badge"><svg style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg> Open for Voting</span>
+      </div>
+      <h3 class="vote-title">$3,000 Fire Recovery Fee Proposal</h3>
+      <p class="vote-description">Special assessment to fund infrastructure repair following the Eaton Fire. <a href="vote.html">Read full proposal &amp; how to vote</a></p>
+      <p class="vote-deadline">Voting closes March 16, 2026 — Annual Shareholder Meeting</p>
+      <div class="vote-actions">
+        <a href="https://electionbuddy.com" target="_blank" rel="noopener" class="pill-button pill-primary">
+          <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Vote Online
+        </a>
+        <a href="vote.html" class="pill-button pill-secondary">Full Proposal</a>
+      </div>
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-label">Next Meeting</div>
-      <h2 class="meeting-title">Annual Shareholder Meeting</h2>
-      <p class="meeting-details">January 22, 2026, 6:00&ndash;8:00 PM at Altadena Public Library</p>
+      <div class="meeting-label"><svg style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Next Meeting</div>
+      <h2 class="meeting-title">Regular Board Meeting</h2>
+      <p class="meeting-details">February 17, 2026, 5:00 PM &mdash; 428 E Sacramento St, Altadena</p>
     </div>
-
-    <section class="quick-links">
-      <h2>Quick Links</h2>
-      <div class="quick-links-grid">
-        <a href="https://lasfloresviewmybill.net" class="quick-link-card" target="_blank" rel="noopener">
-          <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          <span>Pay Bill</span>
-        </a>
-        <a href="documents.html" class="quick-link-card">
-          <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
-          <span>Water Quality</span>
-        </a>
-        <a href="contact.html" class="quick-link-card">
-          <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Office Hours</span>
-        </a>
-        <a href="contact.html" class="quick-link-card">
-          <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <span>Report Issue</span>
-        </a>
-      </div>
-    </section>
 
     <section class="announcements">
       <h2>Recent Announcements</h2>
@@ -66,37 +73,103 @@
         <li class="announcement-item">
           <span class="announcement-date">Jan 2026</span>
           <div class="announcement-body">
-            <strong>2026 Meeting Schedule Available</strong> &mdash; Board meetings resume February. View the full schedule on the <a href="governance.html">Governance</a> page.
+            <strong>Restated Bylaws Published</strong> &mdash; Updated bylaws now available in <a href="documents.html">Documents</a>.
+          </div>
+        </li>
+        <li class="announcement-item">
+          <span class="announcement-date">Jan 2026</span>
+          <div class="announcement-body">
+            <strong>2024 Audit Report Available</strong> &mdash; Annual audit report posted to <a href="documents.html">Documents</a>.
           </div>
         </li>
         <li class="announcement-item">
           <span class="announcement-date">Nov 2025</span>
           <div class="announcement-body">
-            <strong>2024 Audit Report Published</strong> &mdash; The annual financial audit is now available in <a href="documents.html">Documents</a>.
+            <strong>2024 Water Quality Report</strong> &mdash; Annual water quality report now available in <a href="documents.html">Documents</a>.
           </div>
         </li>
         <li class="announcement-item">
-          <span class="announcement-date">Sep 2025</span>
+          <span class="announcement-date">2026</span>
           <div class="announcement-body">
-            <strong>Fall Conservation Update</strong> &mdash; Water sources remain constrained. Continue limiting outdoor use.
+            <strong>2026 Meeting Schedule Published</strong> &mdash; Board meeting dates for 2026 posted to <a href="governance.html">Governance</a> page.
           </div>
         </li>
         <li class="announcement-item">
-          <span class="announcement-date">May 2025</span>
+          <span class="announcement-date">Jul 2025</span>
           <div class="announcement-body">
-            <strong>Infrastructure Update</strong> &mdash; Sacramento Booster Pump rehabilitation completed.
-          </div>
-        </li>
-        <li class="announcement-item">
-          <span class="announcement-date">Apr 2025</span>
-          <div class="announcement-body">
-            <strong>2025 Rate Adjustment</strong> &mdash; New rates effective April 1. See <a href="rates-billing.html">Rates &amp; Billing</a> for details.
+            <strong>Office Hours Updated</strong> &mdash; New in-person and remote schedule in effect. See <a href="contact.html">Contact</a> for details.
           </div>
         </li>
       </ul>
     </section>
 
+    <section class="photo-feature">
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="https://lasfloreswaterco.com/images/r1t1-pumphouse-160930_4520.png" alt="Las Flores Water Co. pump house" loading="lazy">
+          <div class="photo-caption">Pump house</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://lasfloreswaterco.com/images/r1t2-office-picmail.png" alt="Las Flores Water Co. office on Sacramento Street" loading="lazy">
+          <div class="photo-caption">Office — 428 E Sacramento St</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://lasfloreswaterco.com/images/r1t3-poppy-resv.png" alt="Las Flores Water Co. reservoir with California poppies" loading="lazy">
+          <div class="photo-caption">Reservoir</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-feature">
+      <h2>Conservation Resources</h2>
+      <p class="page-description" style="margin-bottom: 16px;">Explore drought-tolerant landscaping ideas, native plant guides, and rebate programs for water-wise upgrades.</p>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="https://lasfloreswaterco.com/images/r2t1-garden-IMG_2720.png" alt="Drought-tolerant garden in Altadena" loading="lazy">
+        </div>
+        <div class="photo-card">
+          <img src="https://lasfloreswaterco.com/images/r3t1-plants-IMG_1688.png" alt="Native plant suited for Southern California" loading="lazy">
+        </div>
+        <div class="photo-card">
+          <img src="https://lasfloreswaterco.com/images/r2t3-garden-IMG_1952.png" alt="Low-water garden design in Altadena" loading="lazy">
+        </div>
+      </div>
+      <p style="margin-top: 12px;"><a href="water-status.html#conservation-resources">View all resources, photos, and helpful links &rarr;</a></p>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="seal.svg" alt="Las Flores Water Co. seal" width="48" height="48">
+        <div>
+          <div class="footer-org-name">Las Flores Water Co.</div>
+          <div class="footer-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <div class="footer-heading">Office</div>
+          <p>428 East Sacramento Street<br>Altadena, CA 91001</p>
+          <p>Mailing: PO Box 426<br>Altadena, CA 91003-0426</p>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <p>Phone: <a href="tel:6267971138">626-797-1138</a><br>Fax: 626-797-6138</p>
+          <p><a href="mailto:info@lasfloreswaterco.com">info@lasfloreswaterco.com</a></p>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <p>Mon: 7:30 AM &ndash; 4:00 PM<br>Wed &amp; Fri: 8:00 AM &ndash; 12:00 PM (remote)</p>
+          <p>Emergency service: <a href="tel:6267971138">626-797-1138</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Las Flores Water Co, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

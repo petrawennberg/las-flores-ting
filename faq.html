@@ -7,250 +7,389 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button class="menu-toggle">&#9776;</button>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   <div class="sidebar-overlay"></div>
-  <nav class="sidebar">
+  <nav class="sidebar" aria-label="Main navigation">
     <div class="sidebar-header">
-      <div class="sidebar-org-name">Las Flores Water Co.</div>
-      <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+      <a href="index.html" class="sidebar-brand">
+        <img class="sidebar-seal" src="seal.svg" alt="Las Flores Water Co. seal" width="110" height="110">
+        <div>
+          <div class="sidebar-org-name">Las Flores Water Co.</div>
+          <div class="sidebar-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </a>
     </div>
     <ul class="sidebar-nav">
-      <li><a href="index.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
-      <li><a href="water-status.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
-      <li><a href="rates-billing.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
-      <li><a href="governance.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
-      <li><a href="documents.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
-      <li><a href="faq.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> FAQ</a></li>
-      <li><a href="contact.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
+      <li><a href="index.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+      <li><a href="water-status.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg> Water Status</a></li>
+      <li><a href="rates-billing.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Rates &amp; Billing</a></li>
+      <li><a href="governance.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Governance</a></li>
+      <li><a href="documents.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a></li>
+      <li><a href="faq.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg> FAQ</a></li>
+      <li><a href="contact.html"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Contact</a></li>
     </ul>
   </nav>
 
-  <main class="main-content">
-    <h1>Frequently Asked Questions</h1>
-    <p class="page-description">Common questions about billing, water service, and shareholder ownership.</p>
+  <main class="main-content" id="main-content">
+    <div class="page-header">
+      <div>
+        <h1>Frequently Asked Questions</h1>
+        <p class="page-description">Common questions about billing, water service, and shareholder ownership.</p>
+      </div>
+      <div class="header-actions">
+        <a href="tel:6267971138" class="urgent-link"><svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Report Issue: 626-797-1138</a>
+        <a href="https://lasflores.viewmybill.net/" target="_blank" rel="noopener" class="pill-button pill-primary">Pay Online</a>
+      </div>
+    </div>
 
+    <!-- ── Billing ── -->
     <div class="faq-section">
       <h2>Billing</h2>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
           When is my bill due?
         </button>
         <div class="faq-answer">
-          <p>Bills are due upon receipt. Late fees are assessed automatically when unpaid balances reach $25 or more.</p>
+          <p>By 4:00 PM on the due date listed on the bill. Bills are mailed within the first week of every month.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          How can I check my account balance?
+          How do I pay my bill?
         </button>
         <div class="faq-answer">
-          <p>Visit <a href="https://lasfloresviewmybill.net">lasfloresviewmybill.net</a> or call the office at 626-797-1138 during business hours.</p>
+          <p>Six methods: mail to PO Box 426, in-person on Mondays at 428 E Sacramento St, online at <a href="https://lasflores.viewmybill.net/" target="_blank" rel="noopener">lasflores.viewmybill.net</a>, direct debit, phone via SOFTtelPay (<a href="tel:8554835729">855-483-5729</a>), or online at <a href="https://pay.softtelpay.com" target="_blank" rel="noopener">pay.softtelpay.com</a>. SOFTtelPay options have a convenience fee. See <a href="rates-billing.html">Rates &amp; Billing</a> for details.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          What are my payment options?
+          When is a late fee assessed?
         </button>
         <div class="faq-answer">
-          <p>You can pay online at <a href="https://lasfloresviewmybill.net">lasfloresviewmybill.net</a>, by phone through SOFTtelPay (855-483-5729), by mail to PO Box 426 Altadena CA 91003-0426, by direct debit, or in person on Mondays at 428 E Sacramento St.</p>
+          <p>A $10 late fee is automatically assessed when the unpaid balance on the account is $25 or more at the start of the next billing cycle.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          Are there convenience fees for online/phone payments?
+          Can my late fee be reversed?
         </button>
         <div class="faq-answer">
-          <p>SOFTtelPay charges $1.95&ndash;$7.95 depending on payment amount, or 4% for amounts over $210. The direct online portal at <a href="https://lasfloresviewmybill.net">lasfloresviewmybill.net</a> has no convenience fee.</p>
+          <p>One courtesy reversal per 12-month period. Contact the office to request it.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          Why is my bill higher than usual?
+          My bank shows on-time payment, but I have a late fee. Why?
         </button>
         <div class="faq-answer">
-          <p>Common causes include property leaks, changes in household water use, or seasonal irrigation. Contact the office to request a meter re-read.</p>
+          <p>Las Flores does not receive electronic payments. When you pay through your bank's online bill pay, they mail a physical check. Allow time for postal delivery.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          Can I get electronic statements?
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Register at <a href="https://lasflores.viewmybill.net/" target="_blank" rel="noopener">lasflores.viewmybill.net</a> with your account number.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          How do I sign up for direct debit?
+        </button>
+        <div class="faq-answer">
+          <p>Download the application from the <a href="documents.html">Documents</a> page and return it to the office. Drafts occur on the 21st of each month. Your bill will show "Paid by Draft" once enrolled.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          I have direct debit but still get a paper bill. Why?
+        </button>
+        <div class="faq-answer">
+          <p>Paper bills continue as confirmation. They will show "Paid by Draft" and no separate payment is needed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          I won't have funds for the direct debit. What do I do?
+        </button>
+        <div class="faq-answer">
+          <p>Pay at the office before the 21st. Contact staff to cancel direct debit if this is recurring. Bank NSF fees will be passed to the customer.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          Why is my bill unexpectedly high?
+        </button>
+        <div class="faq-answer">
+          <p>Possible causes include leaks on your property, household usage changes, or meter misreading. Contact the office to request a meter re-reading.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          Does the company offer leak credits?
+        </button>
+        <div class="faq-answer">
+          <p>No. Las Flores does not offer discounts for known or unknown leaks. Property owners are responsible for all maintenance and water charges.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
           What does the monthly service charge cover?
         </button>
         <div class="faq-answer">
-          <p>The service charge of $39.45 covers fixed expenses including infrastructure maintenance, employee salaries, office expenses, utilities, and insurance. This charge applies even when water is shut off ($30.32/month).</p>
+          <p>Fixed expenses including pipe maintenance, employee salaries, office expenses, utilities, and insurance.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          Can I get a late fee reversed?
+          How do I get archived bills for taxes?
         </button>
         <div class="faq-answer">
-          <p>One courtesy reversal is available per 12-month period. Contact the office to request it.</p>
+          <p>Request copies before January 31st. Usage totals will be mailed. Do not visit the office for statement requests.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          I sent payment through my bank's bill-pay. Why hasn't it posted?
+          Where can I find financial assistance?
         </button>
         <div class="faq-answer">
-          <p>Bank bill-pay services send mailed checks, which may take several business days to arrive and process.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          <span class="faq-toggle">&#9654;</span>
-          Is financial assistance available?
-        </button>
-        <div class="faq-answer">
-          <p>Yes. California offers several programs: Low Income Household Water Assistance Program (LIHWAP), California Arrearage Payment Program, Low Income Home Energy Assistance Program (LIHEAP), and COVID-19 Rent Relief.</p>
+          <p>Several state programs offer assistance through the California Department of Community Services and Development and local housing agencies. Contact the office for current program information.</p>
         </div>
       </div>
     </div>
 
+    <!-- ── Service ── -->
     <div class="faq-section">
       <h2>Service</h2>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          What do I do in a water emergency?
+        </button>
+        <div class="faq-answer">
+          <p>Call <a href="tel:6267971138">626-797-1138</a>. After hours, follow the recorded instructions for emergency service.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
           How do I report a leak?
         </button>
         <div class="faq-answer">
-          <p>Call the office at 626-797-1138. For leak detection on your property, schedule an appointment through the office. Technicians will not enter homes or yards.</p>
+          <p>Contact the office during business hours at <a href="tel:6267971138">626-797-1138</a>, or use the emergency line after hours.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          Can I request my water be shut off temporarily?
+          How do I get water turned off for repairs?
         </button>
         <div class="faq-answer">
-          <p>Yes, water shutoff requests must go through the office. Note that the monthly service charge still applies during shutoff.</p>
+          <p>Call the office to schedule a turnoff at the meter. Do not turn off water at the meter using the company's valve &mdash; damage charges may apply.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          How is water quality tested?
+          How do I get a fire-flow form for permits?
         </button>
         <div class="faq-answer">
-          <p>Water is tested weekly at multiple sites throughout the service area. Lead and copper testing is conducted every four years. Results are published in the annual Water Quality Report, available on the <a href="documents.html">Documents</a> page.</p>
+          <p>Complete Page 1 of County Form 195 with a $100 test fee and a postage-paid return envelope. Your account must be in good standing with no past-due balances.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          How much is 1 HCF of water?
+          How much water is 1 HCF?
         </button>
         <div class="faq-answer">
-          <p>One hundred cubic feet (1 HCF) equals 748 gallons.</p>
+          <p>748 gallons.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          What is a fire-flow form?
+          How often is the water tested?
         </button>
         <div class="faq-answer">
-          <p>Form 195 is required for fire-flow certification. It costs $100 and requires your account to be in good standing. Contact the office to request one.</p>
+          <p>Weekly at multiple sites including wells and reservoirs. Lead and copper testing is conducted every four years. Results are published in the annual <a href="documents.html">Water Quality Report</a>.</p>
         </div>
       </div>
     </div>
 
+    <!-- ── Shareholder & Ownership ── -->
     <div class="faq-section">
       <h2>Shareholder &amp; Ownership</h2>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          When are board meetings held?
+          What does it mean to be a shareholder?
         </button>
         <div class="faq-answer">
-          <p>Board meetings are typically held the third Monday of each month at 7:00 PM, except August. See the <a href="governance.html">Governance</a> page for the full 2026 schedule.</p>
+          <p>Las Flores is a mutual water company. Each property in the service area holds shares. Ownership transfers with the property.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          When is the annual shareholder meeting?
+          Can I sell my shares separately from my property?
         </button>
         <div class="faq-answer">
-          <p>The annual shareholder meeting is held the third Monday of March at 7:00 PM. It is open to all shareholders and the public.</p>
+          <p>No. Shares are appurtenant to the land and transfer with the property.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          I'm selling my home. What do I need to do?
+          How many shares do I own?
         </button>
         <div class="faq-answer">
-          <p>Home sales require a stock transfer ($75 fee) processed through escrow. Contact the office to initiate the transfer.</p>
+          <p>Check the "Stock Credit" line on your bill. Each dollar listed equals one share.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          I'm renting out my property. How does billing work?
+          Where is my stock certificate?
         </button>
         <div class="faq-answer">
-          <p>Tenant occupancy requires closing the owner's service account and opening one in the tenant's name. The property owner remains liable for any unpaid bills.</p>
+          <p>Certificates are kept on file at the Las Flores office.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          How many shareholders does Las Flores have?
+          How do I vote?
         </button>
         <div class="faq-answer">
-          <p>Over 1,400 shareholders constitute the ownership of Las Flores Water Company.</p>
+          <p>Each share is entitled to one vote at the Annual Shareholder Meeting. Proxy voting is available. Bring proxy documentation if attending on behalf of another shareholder.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          Can I attend board meetings?
+          When is the annual shareholders meeting?
         </button>
         <div class="faq-answer">
-          <p>Yes, board meetings are open to shareholders and the public.</p>
+          <p>The regular annual meeting is the third Monday of March at 7:00 PM. The 2026 meeting is March 16. Open to the public.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false">
           <span class="faq-toggle">&#9654;</span>
-          How are board members elected?
+          When are board meetings?
         </button>
         <div class="faq-answer">
-          <p>The board consists of 5 elected directors chosen by shareholders. A 20% quorum is required for shareholder meetings where elections take place.</p>
+          <p>Usually the third Monday of each month (except August) at 5:00 PM. Call the office for prior approval to present. See the <a href="governance.html">Governance</a> page for the full 2026 schedule.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          How do I transfer shares when I buy or sell a home?
+        </button>
+        <div class="faq-answer">
+          <p>Contact your escrow or title company. Stock must transfer to the new owner. The escrow should reserve $75 for the transfer fee plus the final bill amount.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          My house will be tenant-occupied. What do I do?
+        </button>
+        <div class="faq-answer">
+          <p>Notify the company before the tenant moves in to transfer service. Owners remain liable for any unpaid tenant bills. Provide one week notice before tenant departure.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-toggle">&#9654;</span>
+          I inherited the property. How do I transfer the account?
+        </button>
+        <div class="faq-answer">
+          <p>Bring the grant deed showing new ownership and a death certificate if applicable to the office.</p>
         </div>
       </div>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="seal.svg" alt="Las Flores Water Co. seal" width="48" height="48">
+        <div>
+          <div class="footer-org-name">Las Flores Water Co.</div>
+          <div class="footer-org-sub">Est. 1885 &middot; Altadena, CA</div>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <div class="footer-heading">Office</div>
+          <p>428 East Sacramento Street<br>Altadena, CA 91001</p>
+          <p>Mailing: PO Box 426<br>Altadena, CA 91003-0426</p>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <p>Phone: <a href="tel:6267971138">626-797-1138</a><br>Fax: 626-797-6138</p>
+          <p><a href="mailto:info@lasfloreswaterco.com">info@lasfloreswaterco.com</a></p>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <p>Mon: 7:30 AM &ndash; 4:00 PM<br>Wed &amp; Fri: 8:00 AM &ndash; 12:00 PM (remote)</p>
+          <p>Emergency service: <a href="tel:6267971138">626-797-1138</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Las Flores Water Co, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

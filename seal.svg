@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <path id="top-arc" d="M 33,120 A 87,87 0 0,1 207,120" fill="none"/>
+    <path id="bot-arc" d="M 27,120 A 93,93 0 0,0 213,120" fill="none"/>
+  </defs>
+
+  <!-- White fill -->
+  <circle cx="120" cy="120" r="112" fill="#FFFFFF"/>
+
+  <!-- Outer double ring -->
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#1B2A6B" stroke-width="6"/>
+  <circle cx="120" cy="120" r="102" fill="none" stroke="#1B2A6B" stroke-width="2"/>
+
+  <!-- Inner ring -->
+  <circle cx="120" cy="120" r="78" fill="none" stroke="#1B2A6B" stroke-width="2.5"/>
+
+  <!-- Top arc text -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" letter-spacing="2.5" fill="#1B2A6B">
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">LAS FLORES WATER CO.</textPath>
+  </text>
+
+  <!-- Bottom arc text -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#1B2A6B">
+    <textPath href="#bot-arc" startOffset="50%" text-anchor="middle">INC. JUNE 1885</textPath>
+  </text>
+
+  <!-- ── Rose plant ── -->
+
+  <!-- Stem -->
+  <line x1="120" y1="92" x2="120" y2="168" stroke="#1B4332" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Left leaf branch (lower on stem) -->
+  <line x1="120" y1="148" x2="102" y2="135" stroke="#1B4332" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left compound leaf — large serrated rose leaf -->
+  <path d="M102 135 L92 128 L85 118 L80 108 L78 98
+           Q76 93 79 92 L82 97 L80 103
+           Q82 98 85 94 L86 101 L83 108
+           Q86 103 89 98 L89 106 L86 113
+           Q89 108 92 103 L92 110 L89 117
+           Q92 112 95 107 L95 114 L92 121
+           Q95 117 98 112 L98 119 L96 126
+           Q98 123 101 119 L101 125 Z" fill="#1B4332"/>
+  <!-- Left leaf vein -->
+  <path d="M102 135 L90 122 L79 98" fill="none" stroke="#2D6A4F" stroke-width="0.9"/>
+
+  <!-- Right leaf branch (higher on stem) -->
+  <line x1="120" y1="136" x2="138" y2="123" stroke="#1B4332" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right compound leaf — large serrated rose leaf -->
+  <path d="M138 123 L148 116 L155 106 L160 96 L162 86
+           Q164 81 161 80 L158 85 L160 91
+           Q158 86 155 82 L154 89 L157 96
+           Q154 91 151 86 L151 94 L154 101
+           Q151 96 148 91 L148 98 L151 105
+           Q148 101 145 96 L145 102 L148 109
+           Q145 105 142 100 L142 107 L144 114
+           Q142 111 139 107 L139 113 Z" fill="#1B4332"/>
+  <!-- Right leaf vein -->
+  <path d="M138 123 L150 110 L161 86" fill="none" stroke="#2D6A4F" stroke-width="0.9"/>
+
+  <!-- Rose bloom — larger cup-shaped outlined rose -->
+  <!-- Outer petals -->
+  <path d="M103 88 Q99 78 103 70 Q108 64 114 70 Q117 65 120 68 Q123 65 126 70 Q132 64 137 70 Q141 78 137 88"
+        fill="none" stroke="#C44D38" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner petal curves -->
+  <path d="M108 84 Q112 74 120 72 Q128 74 132 84"
+        fill="none" stroke="#C44D38" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bottom cup / calyx -->
+  <path d="M103 88 Q112 94 120 92 Q128 94 137 88"
+        fill="none" stroke="#C44D38" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Center spiral -->
+  <path d="M117 80 Q120 77 123 80 Q121 83 118 81"
+        fill="none" stroke="#C44D38" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

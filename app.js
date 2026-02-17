@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle) {
     toggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
+      const isOpen = sidebar.classList.toggle('open');
       overlay.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
   }
 
@@ -17,14 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', () => {
       sidebar.classList.remove('open');
       overlay.classList.remove('open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
     });
   }
+
+  // ── Escape key closes sidebar ──
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar && sidebar.classList.contains('open')) {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    }
+  });
 
   // ── FAQ Accordion ──
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
-      item.classList.toggle('open');
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
     });
   });
 
@@ -34,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const href = link.getAttribute('href');
     if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
       link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     }
   });
 });
