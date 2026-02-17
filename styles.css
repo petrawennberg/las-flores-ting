@@ -318,14 +318,11 @@ p {
 
 a {
   color: var(--accent);
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 97, 255, 0.3);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.1s ease;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration-color: var(--accent);
+  text-decoration: underline;
 }
 
 /* ── Alert Banner ── */
