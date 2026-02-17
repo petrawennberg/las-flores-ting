@@ -1413,12 +1413,12 @@ tbody tr:last-child td {
   }
 
   .site-footer {
-    padding: 48px 24px 32px;
+    padding: 48px 56px 32px;
     padding-left: calc(var(--sidebar-width) + 56px);
   }
 
   .footer-inner {
-    max-width: var(--content-max);
+    max-width: none;
     margin: 0;
   }
 
