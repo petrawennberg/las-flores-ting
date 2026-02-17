@@ -1306,11 +1306,11 @@ tbody tr:last-child td {
   color: var(--severity-critical);
 }
 
-.footer-emergency-phone a {
+.footer-columns .footer-emergency-phone a {
   color: var(--severity-critical);
 }
 
-.footer-emergency-phone a:hover {
+.footer-columns .footer-emergency-phone a:hover {
   color: #A32020;
 }
 
