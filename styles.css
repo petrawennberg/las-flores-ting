@@ -1418,7 +1418,7 @@ tbody tr:last-child td {
   }
 
   .footer-inner {
-    max-width: none;
+    max-width: 900px;
     margin: 0;
   }
 
