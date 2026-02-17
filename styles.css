@@ -1313,6 +1313,7 @@ tbody tr:last-child td {
 
 .footer-columns .footer-emergency-phone a:hover {
   color: #A32020;
+  text-decoration-color: #A32020;
 }
 
 .footer-columns p {
