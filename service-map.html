@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service Map — Las Flores Water Co.</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin=""></script>
 </head>
 <body>
 
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   <div class="sidebar-overlay"></div>
   <nav class="sidebar" aria-label="Main navigation">
     <div class="sidebar-header">
@@ -50,10 +50,6 @@
 
     <div class="map-container">
       <div id="map" class="map-element"></div>
-      <div class="map-loading" id="map-loading">
-        <div class="map-loading-spinner"></div>
-        <span>Loading map data&hellip;</span>
-      </div>
       <div class="map-legend" id="map-legend">
         <div class="map-legend-title">Legend</div>
         <div class="map-legend-item">
@@ -61,12 +57,16 @@
           Las Flores Service Area
         </div>
         <div class="map-legend-item">
-          <span class="map-legend-swatch map-legend-circle" style="background: #D3362D;"></span>
-          Fire Hydrant
+          <span class="map-legend-swatch map-legend-circle" style="background: #D97917;"></span>
+          Pump House / Well
         </div>
         <div class="map-legend-item">
-          <span class="map-legend-swatch" style="background: rgba(153, 153, 153, 0.1); border: 2px dashed #999;"></span>
-          Neighboring System
+          <span class="map-legend-swatch map-legend-circle" style="background: #2C7BB6;"></span>
+          Reservoir
+        </div>
+        <div class="map-legend-item">
+          <span class="map-legend-swatch map-legend-circle" style="background: #D3362D;"></span>
+          Fire Hydrant
         </div>
       </div>
     </div>
@@ -86,7 +86,6 @@
         <div>
           <div class="footer-heading">Office</div>
           <p>428 East Sacramento Street<br>Altadena, CA 91001</p>
-          <p>Mailing: PO Box 426<br>Altadena, CA 91003-0426</p>
         </div>
         <div>
           <div class="footer-heading">Contact</div>
@@ -108,6 +107,7 @@
   <script src="app.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // ── Map init ──
       var map = L.map('map', {
         center: [34.197, -118.131],
         zoom: 15,
@@ -115,157 +115,82 @@
       });
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         maxZoom: 19
       }).addTo(map);
 
-      var loadingEl = document.getElementById('map-loading');
-      var boundaryLayer = L.layerGroup().addTo(map);
+      // ── Service Boundary (embedded — instant) ──
+      var boundaryLayer = L.geoJSON({
+        "type": "Feature",
+        "geometry": {
+          "type": "MultiPolygon",
+          "coordinates": [
+            [[[-118.125747,34.207308],[-118.13076,34.207404],[-118.130747,34.203977],[-118.130767,34.204003],[-118.130797,34.204019],[-118.130847,34.204036],[-118.13088,34.20404],[-118.130961,34.20404],[-118.131224,34.204032],[-118.131588,34.204009],[-118.132347,34.203951],[-118.132514,34.203936],[-118.133281,34.203869],[-118.133383,34.203861],[-118.134403,34.203779],[-118.134865,34.203744],[-118.134797,34.20328],[-118.134367,34.203281],[-118.136226,34.200837],[-118.139849,34.202739],[-118.141498,34.202856],[-118.141927,34.20226],[-118.14319,34.20021],[-118.142799,34.200021],[-118.141892,34.199583],[-118.140987,34.199146],[-118.140361,34.198844],[-118.140045,34.198687],[-118.139307,34.19832],[-118.137786,34.197565],[-118.138042,34.197203],[-118.138156,34.197043],[-118.138182,34.197006],[-118.13874,34.196205],[-118.139738,34.194772],[-118.13989,34.194556],[-118.140637,34.193514],[-118.141033,34.192934],[-118.135528,34.191159],[-118.133874,34.190597],[-118.133094,34.190397],[-118.132352,34.190352],[-118.131833,34.190475],[-118.131763,34.19305],[-118.133692,34.193674],[-118.13326,34.1943],[-118.132667,34.194112],[-118.131328,34.193675],[-118.131216,34.193653],[-118.131171,34.193643],[-118.131145,34.194312],[-118.132378,34.194715],[-118.132046,34.195306],[-118.132493,34.195441],[-118.132444,34.19554],[-118.132424,34.195592],[-118.132401,34.195672],[-118.132388,34.195739],[-118.132373,34.195869],[-118.131609,34.195648],[-118.1315,34.197437],[-118.13074,34.197361],[-118.129775,34.197624],[-118.12894,34.197717],[-118.128439,34.197748],[-118.12818,34.197918],[-118.127773,34.198643],[-118.127328,34.198705],[-118.127161,34.198798],[-118.126789,34.198675],[-118.126685,34.198638],[-118.126552,34.198571],[-118.126288,34.198449],[-118.12616,34.198384],[-118.126142,34.198372],[-118.126041,34.198312],[-118.126016,34.198294],[-118.125947,34.198239],[-118.125897,34.198193],[-118.125852,34.198147],[-118.125812,34.198103],[-118.125754,34.198029],[-118.125741,34.198039],[-118.125652,34.198107],[-118.125632,34.198122],[-118.125819,34.199024],[-118.127608,34.200871],[-118.125911,34.200873],[-118.124352,34.200088],[-118.122252,34.201006],[-118.122257,34.204174],[-118.125925,34.204171],[-118.125747,34.207308]]],
+            [[[-118.122528,34.175891],[-118.121588,34.175903],[-118.121594,34.17651],[-118.121674,34.17674],[-118.121704,34.176818],[-118.121762,34.176935],[-118.121798,34.176999],[-118.121838,34.177075],[-118.12187,34.177153],[-118.121876,34.177177],[-118.121883,34.177205],[-118.12189,34.177245],[-118.12189,34.177312],[-118.121883,34.17738],[-118.121859,34.177489],[-118.121829,34.177585],[-118.12178,34.177717],[-118.121755,34.177768],[-118.121727,34.177818],[-118.121616,34.177989],[-118.12157,34.178077],[-118.121555,34.178116],[-118.121547,34.178142],[-118.121532,34.178209],[-118.121518,34.17848],[-118.123179,34.178477],[-118.125003,34.178472],[-118.125236,34.178472],[-118.125231,34.177791],[-118.126425,34.17778],[-118.126407,34.177172],[-118.12728,34.177166],[-118.127274,34.176501],[-118.12727,34.175889],[-118.127265,34.175285],[-118.126373,34.175295],[-118.126335,34.175295],[-118.126348,34.175143],[-118.122538,34.175178],[-118.122528,34.175891]]],
+            [[[-118.121561,34.18652],[-118.120519,34.186531],[-118.12052,34.186728],[-118.120517,34.186887],[-118.120515,34.186943],[-118.120517,34.186969],[-118.120522,34.187071],[-118.12052,34.18714],[-118.120509,34.187207],[-118.120489,34.187256],[-118.120476,34.187281],[-118.120451,34.187317],[-118.12039,34.18738],[-118.120355,34.187419],[-118.120317,34.187448],[-118.120269,34.18748],[-118.120584,34.187781],[-118.120586,34.18955],[-118.120717,34.190027],[-118.121029,34.190483],[-118.1211,34.190471],[-118.121246,34.190451],[-118.121284,34.190447],[-118.121393,34.190435],[-118.121641,34.190417],[-118.121806,34.190408],[-118.12217,34.190394],[-118.122831,34.190378],[-118.123274,34.190372],[-118.123265,34.18938],[-118.123255,34.188596],[-118.123247,34.187753],[-118.123238,34.186957],[-118.123232,34.186504],[-118.121561,34.18652]]],
+            [[[-118.125246,34.179246],[-118.125247,34.179723],[-118.125003,34.179726],[-118.123193,34.179744],[-118.123204,34.180935],[-118.123208,34.181297],[-118.123208,34.181374],[-118.127326,34.181334],[-118.127334,34.18081],[-118.127314,34.179703],[-118.127306,34.179244],[-118.125246,34.179246]]]
+          ]
+        },
+        "properties": {
+          "SABL_PWSID": "CA1910061",
+          "WATER_SYSTEM_NAME": "LAS FLORES WATER CO.",
+          "POPULATION": 4847,
+          "SERVICE_CONNECTIONS": 1479
+        }
+      }, {
+        style: { color: '#2C7BB6', weight: 3, opacity: 0.9, fillColor: '#2C7BB6', fillOpacity: 0.12 },
+        onEachFeature: function (f, layer) {
+          layer.bindPopup(
+            '<strong>Las Flores Water Co.</strong><br>' +
+            '1,479 connections serving 4,847 residents<br>' +
+            '<span style="font-size:12px;color:#8C8686;">PWSID: CA1910061</span>'
+          );
+        }
+      }).addTo(map);
+
+      map.fitBounds(boundaryLayer.getBounds().pad(0.05));
+
+      // ── Infrastructure (hardcoded — instant) ──
+      var infraLayer = L.layerGroup([
+        L.circleMarker([34.1824, -118.1418], {
+          radius: 8, fillColor: '#D97917', color: '#FFF', weight: 2.5, opacity: 1, fillOpacity: 0.9
+        }).bindPopup('<strong>Office / Mount View Well / Pump House</strong><br>428 E Sacramento St<br>Well supplies ~35% of system water (Raymond Basin)<br>Sacramento Booster Pump C rehabilitated 2024'),
+        L.circleMarker([34.2035, -118.1297], {
+          radius: 8, fillColor: '#2C7BB6', color: '#FFF', weight: 2.5, opacity: 1, fillOpacity: 0.9
+        }).bindPopup('<strong>Lake &amp; Cobb Reservoirs</strong><br>3336 Lake Ave<br>Two concrete reservoirs (built 1925)<br>Roofs lost in Eaton Fire — currently empty')
+      ]).addTo(map);
+
+      // ── Fire Hydrants (fetched on load, off by default) ──
       var hydrantLayer = L.layerGroup();
-      var neighborLayer = L.layerGroup();
 
-      // ── Service Boundary ──
-      fetch('data/las-flores-boundary.geojson')
+      fetch('https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/LACoFD_Fire_Hydrants/FeatureServer/0/query?' +
+        'where=1%3D1&geometry=-118.145,34.175,-118.12,34.21&geometryType=esriGeometryEnvelope' +
+        '&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=HYDRANT_CONFIG' +
+        '&f=geojson&returnGeometry=true&outSR=4326&resultRecordCount=2000')
         .then(function (r) { return r.json(); })
         .then(function (data) {
           L.geoJSON(data, {
-            style: {
-              color: '#2C7BB6',
-              weight: 3,
-              opacity: 0.9,
-              fillColor: '#2C7BB6',
-              fillOpacity: 0.12
+            pointToLayer: function (f, ll) {
+              return L.circleMarker(ll, { radius: 5, fillColor: '#D3362D', color: '#A32020', weight: 1.5, opacity: 0.9, fillOpacity: 0.8 });
             },
-            onEachFeature: function (feature, layer) {
-              var p = feature.properties;
-              layer.bindPopup(
-                '<strong>Las Flores Water Co.</strong><br>' +
-                p.SERVICE_CONNECTIONS.toLocaleString() + ' connections serving ' +
-                p.POPULATION.toLocaleString() + ' residents<br>' +
-                '<span style="font-size:12px;color:#8C8686;">PWSID: ' + p.SABL_PWSID + '</span>'
-              );
-            }
-          }).addTo(boundaryLayer);
-
-          map.fitBounds(boundaryLayer.getBounds().pad(0.05));
-          checkLoaded();
-        })
-        .catch(function () { checkLoaded(); });
-
-      // ── Fire Hydrants ──
-      var hydrantUrl = 'https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/LACoFD_Fire_Hydrants/FeatureServer/0/query?' +
-        'where=1%3D1' +
-        '&geometry=-118.145,34.175,-118.12,34.21' +
-        '&geometryType=esriGeometryEnvelope' +
-        '&inSR=4326' +
-        '&spatialRel=esriSpatialRelIntersects' +
-        '&outFields=*' +
-        '&f=geojson' +
-        '&returnGeometry=true' +
-        '&outSR=4326' +
-        '&resultRecordCount=2000';
-
-      fetch(hydrantUrl)
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          L.geoJSON(data, {
-            pointToLayer: function (feature, latlng) {
-              return L.circleMarker(latlng, {
-                radius: 5,
-                fillColor: '#D3362D',
-                color: '#A32020',
-                weight: 1.5,
-                opacity: 0.9,
-                fillOpacity: 0.8
-              });
-            },
-            onEachFeature: function (feature, layer) {
-              var p = feature.properties;
-              var nozzles = [];
-              if (p.NOZZLE_1) nozzles.push(p.NOZZLE_1);
-              if (p.NOZZLE_2) nozzles.push(p.NOZZLE_2);
-              if (p.NOZZLE_3) nozzles.push(p.NOZZLE_3);
-              if (p.NOZZLE_4) nozzles.push(p.NOZZLE_4);
-
-              var popup = '<strong>Fire Hydrant</strong>';
-              if (nozzles.length > 0) {
-                popup += '<br>Nozzles: ' + nozzles.join(', ');
-              }
-              if (p.HYDRANT_SIZE) {
-                popup += '<br>Size: ' + p.HYDRANT_SIZE;
-              }
-              if (p.FLOW_RATE) {
-                popup += '<br>Flow: ' + p.FLOW_RATE + ' GPM';
-              }
-              popup += '<br><span style="font-size:12px;color:#8C8686;">Source: LACoFD (2019)</span>';
-              layer.bindPopup(popup);
+            onEachFeature: function (f, layer) {
+              var t = '<strong>Fire Hydrant</strong>';
+              if (f.properties.HYDRANT_CONFIG) t += '<br>Config: ' + f.properties.HYDRANT_CONFIG + '″';
+              t += '<br><span style="font-size:12px;color:#8C8686;">Source: LACoFD</span>';
+              layer.bindPopup(t);
             }
           }).addTo(hydrantLayer);
-          checkLoaded();
         })
-        .catch(function () { checkLoaded(); });
-
-      // ── Neighboring Systems ──
-      var neighborUrl = 'https://gis.data.ca.gov/datasets/fbba842bf134497c9d611ad506ec48cc_0/FeatureServer/0/query?' +
-        'where=ADDRESS_CITY_NAME%3D%27ALTADENA%27%20AND%20WATER_SYSTEM_NUMBER%3C%3E%27CA1910061%27' +
-        '&outFields=WATER_SYSTEM_NAME,WATER_SYSTEM_NUMBER,POPULATION,SERVICE_CONNECTIONS' +
-        '&f=geojson' +
-        '&returnGeometry=true' +
-        '&outSR=4326';
-
-      fetch(neighborUrl)
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          L.geoJSON(data, {
-            style: {
-              color: '#999999',
-              weight: 2,
-              opacity: 0.5,
-              fillColor: '#999999',
-              fillOpacity: 0.05,
-              dashArray: '6, 4'
-            },
-            onEachFeature: function (feature, layer) {
-              var p = feature.properties;
-              var name = (p.WATER_SYSTEM_NAME || '').replace(/\b\w+/g, function (w) {
-                return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
-              });
-              var popup = '<strong>' + name + '</strong>';
-              if (p.POPULATION) {
-                popup += '<br>' + p.POPULATION.toLocaleString() + ' residents';
-              }
-              if (p.SERVICE_CONNECTIONS) {
-                popup += '<br>' + p.SERVICE_CONNECTIONS.toLocaleString() + ' connections';
-              }
-              popup += '<br><span style="font-size:12px;color:#8C8686;">PWSID: ' + p.WATER_SYSTEM_NUMBER + '</span>';
-              layer.bindPopup(popup);
-            }
-          }).addTo(neighborLayer);
-          checkLoaded();
-        })
-        .catch(function () { checkLoaded(); });
+        .catch(function () {});
 
       // ── Layer Control ──
-      var overlays = {
+      L.control.layers(null, {
         'Service Boundary': boundaryLayer,
-        'Fire Hydrants': hydrantLayer,
-        'Neighboring Systems': neighborLayer
-      };
-      L.control.layers(null, overlays, { position: 'topright', collapsed: false }).addTo(map);
+        'Infrastructure': infraLayer,
+        'Fire Hydrants': hydrantLayer
+      }, { position: 'topright', collapsed: window.innerWidth < 769 }).addTo(map);
 
-      // ── Loading state ──
-      var loadCount = 0;
-      function checkLoaded() {
-        loadCount++;
-        if (loadCount >= 3 && loadingEl) {
-          loadingEl.style.display = 'none';
-        }
-      }
-
-      // ── Resize handling ──
-      window.addEventListener('resize', function () {
-        map.invalidateSize();
-      });
+      window.addEventListener('resize', function () { map.invalidateSize(); });
     });
   </script>
 </body>

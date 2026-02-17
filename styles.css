@@ -209,19 +209,28 @@ body {
 .menu-toggle {
   display: flex;
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: 12px;
+  left: 12px;
   z-index: 200;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--bg-card);
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-toggle:active {
+  background: var(--bg-muted);
+}
+
+.menu-toggle svg {
+  display: block;
 }
 
 .sidebar-overlay {
@@ -240,7 +249,7 @@ body {
 
 .main-content {
   margin-left: 0;
-  padding: 24px 24px 64px;
+  padding: 64px 20px 48px;
   max-width: 100%;
 }
 
@@ -262,7 +271,10 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
 h1 {
@@ -278,9 +290,9 @@ h2 {
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.35;
-  margin-top: 104px;
+  margin-top: 40px;
   margin-bottom: 16px;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 h2:first-child { margin-top: 0; }
@@ -298,9 +310,9 @@ p {
 }
 
 .page-description {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   line-height: 1.65;
 }
 
@@ -418,7 +430,7 @@ a:hover {
 
 .quick-links-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 8px;
   margin-bottom: 8px;
 }
@@ -842,7 +854,7 @@ tbody tr:last-child td {
   background: var(--bg-muted);
   border: none;
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 16px 20px;
 }
 
 .contact-label {
@@ -891,17 +903,22 @@ tbody tr:last-child td {
 
 .contact-block h2 {
   margin-top: 0;
+  padding-top: 0;
   font-size: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .contact-block p {
   font-size: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+.contact-block p:last-child {
+  margin-bottom: 0;
 }
 
 .contact-hours {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .contact-hours-effective {
@@ -931,7 +948,7 @@ tbody tr:last-child td {
 }
 
 .contact-holidays {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .holiday-list {
@@ -963,9 +980,9 @@ tbody tr:last-child td {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 24px;
+  padding: 10px 18px;
   border-radius: var(--radius);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -992,7 +1009,7 @@ tbody tr:last-child td {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--severity-critical);
   text-decoration: none;
@@ -1240,7 +1257,7 @@ tbody tr:last-child td {
 .site-footer {
   margin-left: 0;
   background: var(--bg-footer);
-  padding: 48px 24px 32px;
+  padding: 36px 20px 28px;
   width: 100%;
 }
 
@@ -1340,6 +1357,11 @@ tbody tr:last-child td {
     font-size: 34px;
   }
 
+  h2 {
+    margin-top: 104px;
+    padding-top: 40px;
+  }
+
   .page-header {
     flex-direction: row;
     align-items: flex-start;
@@ -1349,6 +1371,27 @@ tbody tr:last-child td {
   .header-actions {
     flex-shrink: 0;
     margin-top: 4px;
+    gap: 24px;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .pill-button {
+    padding: 10px 24px;
+    font-size: 15px;
+  }
+
+  .page-description {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+
+  .quick-links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .urgent-link {
+    font-size: 15px;
   }
 
   .info-cards {
@@ -1368,6 +1411,7 @@ tbody tr:last-child td {
   }
 
   .site-footer {
+    padding: 48px 24px 32px;
     padding-left: calc(var(--sidebar-width) + 56px);
   }
 
@@ -1403,7 +1447,19 @@ tbody tr:last-child td {
 /* ── Service Map ── */
 
 .main-content-map {
-  padding-bottom: 0;
+  padding: 56px 16px 0;
+}
+
+.main-content-map .page-header {
+  margin-bottom: 16px;
+}
+
+.main-content-map .page-description {
+  display: none;
+}
+
+.main-content-map .header-actions {
+  display: none;
 }
 
 .map-container {
@@ -1411,64 +1467,38 @@ tbody tr:last-child td {
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 0;
+  /* Prevent iOS bounce-scroll from interfering */
+  -webkit-overflow-scrolling: touch;
 }
 
 .map-element {
   width: 100%;
-  height: calc(100vh - 260px);
-  min-height: 400px;
+  height: calc(100dvh - 120px);
+  min-height: 300px;
   background: var(--bg-muted);
-}
-
-.map-loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(247, 245, 242, 0.85);
-  z-index: 500;
-  font-size: 15px;
-  color: var(--text-secondary);
-  pointer-events: none;
-}
-
-.map-loading-spinner {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--border);
-  border-top-color: var(--accent);
-  border-radius: 50%;
-  animation: map-spin 0.7s linear infinite;
-}
-
-@keyframes map-spin {
-  to { transform: rotate(360deg); }
+  /* Prevent pinch-zoom on the whole page */
+  touch-action: none;
 }
 
 .map-legend {
   position: absolute;
-  bottom: 24px;
-  left: 12px;
+  bottom: 28px;
+  left: 8px;
   z-index: 450;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 13px;
-  line-height: 1.5;
+  padding: 8px 10px;
+  font-size: 11px;
+  line-height: 1.4;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  max-width: 200px;
+  max-width: 160px;
 }
 
 .map-legend-title {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-tertiary);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -1476,8 +1506,8 @@ tbody tr:last-child td {
 .map-legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 5px;
+  gap: 6px;
+  margin-bottom: 3px;
   color: var(--text-secondary);
 }
 
@@ -1487,15 +1517,15 @@ tbody tr:last-child td {
 
 .map-legend-swatch {
   display: inline-block;
-  width: 16px;
-  height: 12px;
+  width: 14px;
+  height: 10px;
   border-radius: 2px;
   flex-shrink: 0;
 }
 
 .map-legend-circle {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   margin: 0 3px;
 }
@@ -1511,14 +1541,21 @@ tbody tr:last-child td {
 }
 
 .leaflet-popup-content {
-  margin: 12px 16px;
+  margin: 12px 14px;
+}
+
+.leaflet-popup-close-button {
+  width: 28px !important;
+  height: 28px !important;
+  font-size: 20px !important;
+  padding: 4px !important;
 }
 
 .leaflet-control-layers {
   border-radius: 6px !important;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
 }
 
 .leaflet-control-layers-list {
@@ -1529,12 +1566,85 @@ tbody tr:last-child td {
   margin-bottom: 2px;
 }
 
+/* Larger touch targets for zoom controls on mobile */
+.leaflet-control-zoom a {
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  font-size: 18px !important;
+}
+
+.leaflet-bar a {
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+}
+
 @media (min-width: 769px) {
   .main-content-map {
-    padding-bottom: 0;
+    padding: 40px 56px 0;
+  }
+
+  .main-content-map .page-header {
+    margin-bottom: 32px;
+  }
+
+  .main-content-map .page-description {
+    display: block;
+  }
+
+  .main-content-map .header-actions {
+    display: flex;
   }
 
   .map-element {
     height: calc(100vh - 280px);
+    min-height: 400px;
+    touch-action: auto;
+  }
+
+  .map-legend {
+    bottom: 24px;
+    left: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 200px;
+  }
+
+  .map-legend-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .map-legend-item {
+    gap: 8px;
+    margin-bottom: 5px;
+  }
+
+  .map-legend-swatch {
+    width: 16px;
+    height: 12px;
+  }
+
+  .map-legend-circle {
+    width: 10px;
+    height: 10px;
+  }
+
+  .leaflet-popup-content {
+    margin: 12px 16px;
+  }
+
+  .leaflet-control-layers {
+    font-size: 14px !important;
+  }
+
+  .leaflet-control-zoom a,
+  .leaflet-bar a {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 16px !important;
   }
 }
