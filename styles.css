@@ -1308,6 +1308,7 @@ tbody tr:last-child td {
 
 .footer-columns .footer-emergency-phone a {
   color: var(--severity-critical);
+  text-decoration-color: var(--severity-critical);
 }
 
 .footer-columns .footer-emergency-phone a:hover {
