@@ -1302,6 +1302,10 @@ tbody tr:last-child td {
   margin-bottom: 8px;
 }
 
+.footer-heading-emergency {
+  color: #A32020;
+}
+
 .footer-columns p {
   font-size: 14px;
   color: var(--text-secondary);
