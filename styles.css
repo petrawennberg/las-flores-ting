@@ -1303,6 +1303,14 @@ tbody tr:last-child td {
 }
 
 .footer-heading-emergency {
+  color: var(--severity-critical);
+}
+
+.footer-emergency-phone a {
+  color: var(--severity-critical);
+}
+
+.footer-emergency-phone a:hover {
   color: #A32020;
 }
 
