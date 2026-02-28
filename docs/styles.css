@@ -1,6 +1,34 @@
 /* Las Flores Water Co. — Ting Template */
 /* Dropbox-inspired · Mobile-first · WCAG AA */
 
+/* ── Password Gate ── */
+
+html.gated body > *:not(.gate-overlay) { display: none !important; }
+
+.gate-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #F7F5F2;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.gate-box { text-align: center; max-width: 320px; padding: 20px; }
+.gate-title { font-size: 20px; font-weight: 700; color: #1E1919; margin-bottom: 4px; }
+.gate-sub { font-size: 14px; color: #8C8686; margin-bottom: 24px; }
+.gate-form { display: flex; gap: 8px; }
+.gate-input {
+  flex: 1; padding: 10px 14px; font-size: 15px;
+  border: 1px solid #E5E0DB; border-radius: 8px;
+  font-family: inherit; outline: none; background: #fff;
+}
+.gate-input:focus { border-color: #0061FF; box-shadow: 0 0 0 2px rgba(0,97,255,0.15); }
+.gate-btn {
+  padding: 10px 20px; font-size: 14px; font-weight: 600;
+  background: #0061FF; color: #fff; border: none; border-radius: 8px;
+  cursor: pointer; font-family: inherit;
+}
+.gate-btn:hover { background: #0053DB; }
+.gate-error { color: #D3362D; font-size: 13px; margin-top: 12px; }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
 
 :root {
